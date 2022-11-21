@@ -14,13 +14,16 @@ var app = new Vue
     {
         test()
         {
-            axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
-            .then((risposta) =>
+            for(let i=0; i<10; i++)
             {
-                let nuovaMail = risposta.data.response
-                this.mail = nuovaMail
-                console.log(this.mail)
-            })
+                axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
+                .then((risposta) =>
+                {
+                    let nuovaMail = risposta.data.response
+                    this.mail = nuovaMail
+                    console.log(this.mail)
+                })
+            }
         }
     }
 })
