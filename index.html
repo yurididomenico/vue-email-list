@@ -20,16 +20,29 @@
 <body>
 
   <div id="app">
+    <header class="p-3 mt-3 mb-3 bg-primary bg-gradient shadow">
+      <h1 class="container">YDD - Mail API</h1>
+    </header>
 
-    <button type="button" class="btn btn-primary" @click="test()">Vai!</button>
-    <button type="button" class="btn btn-primary" @click="refresh()">Reset</button>
+    <hr>
 
-    <ul>
-      <li v-for="(elem, index) in listaMail" v-if="listaMail.length == 10">{{elem}}</li>
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <button type="button" class="btn btn-primary w-25" @click="generaMail()">Vai!</button>
+        <button type="button" class="btn btn-primary w-25" @click="refresh()">Reset</button>
+      </div>
+    </div>
 
-      
-    </ul>
 
+
+      <hr>
+
+    <div class="container">
+      <ul>
+        <li class="bg-light py-1 w-25" v-for="(elem, index) in listaMail" v-if="listaMail.length == 10">{{elem}}</li>
+      </ul>
+
+    </div>
 
 
   </div>

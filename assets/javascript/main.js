@@ -12,7 +12,7 @@ var app = new Vue
 
     methods: 
     {
-        test()
+        generaMail()
         {
             // if(this.listaMail.length == 10)
             // {
