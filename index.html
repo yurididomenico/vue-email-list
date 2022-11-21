@@ -22,10 +22,16 @@
   <div id="app">
 
     <button type="button" class="btn btn-primary" @click="test()">Vai!</button>
+    <button type="button" class="btn btn-primary" @click="refresh()">Reset</button>
 
     <ul>
-      <li v-for="mail in listaMail">{{mail}}</li>
+      <li v-for="(elem, index) in listaMail" v-if="listaMail.length == 10">{{elem}}</li>
+
+      
     </ul>
+
+
+
   </div>
 
 
