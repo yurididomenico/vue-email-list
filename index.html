@@ -23,7 +23,9 @@
 
     <button type="button" class="btn btn-primary" @click="test()">Vai!</button>
 
-    <div>{{mail}}</div>
+    <ul>
+      <li v-for="mail in listaMail">{{mail}}</li>
+    </ul>
   </div>
 
 
