@@ -19,6 +19,7 @@
 
 <body>
 
+  <!-- div contenitore collegato a JS -->
   <div id="app">
     <header class="p-3 mt-3 mb-3 bg-primary bg-gradient shadow">
       <h1 class="container">YDD - Mail API</h1>
@@ -26,6 +27,7 @@
 
     <hr>
 
+    <!-- Sezione Bottoni -->
     <div class="container">
       <div class="d-flex justify-content-between">
         <button type="button" class="btn btn-primary w-25" @click="generaMail()">Vai!</button>
@@ -33,18 +35,15 @@
       </div>
     </div>
 
+    <hr>
 
-
-      <hr>
-
-    <div class="container">
-      <ul>
-        <li class="bg-light py-1 w-25" v-for="(elem, index) in listaMail" v-if="listaMail.length == 10">{{elem}}</li>
-      </ul>
-
+    <!-- Sezione creazione mail -->
+    <div class="container bg-light">
+      <ol class="p-0">
+        <!-- Ciclo e Stampa solo dopo aver creato 10 mail -->
+        <li class="py-1 mx-auto w-100  border d-block" v-for="(elem, index) in listaMail" v-if="listaMail.length == 10">{{elem}}</li>
+      </ol>
     </div>
-
-
   </div>
 
 
